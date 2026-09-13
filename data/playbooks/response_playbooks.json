@@ -1,0 +1,17 @@
+[
+  {
+    "id": "brute_force_response",
+    "title": "Brute Force Response Playbook",
+    "description": "1. Identify source IP and targeted accounts from SIEM. 2. Block source IP at perimeter firewall. 3. Enable MFA on targeted accounts. 4. Review successful logins from same IP. 5. Reset passwords if compromise suspected. 6. Document timeline and IOCs in incident report."
+  },
+  {
+    "id": "web_attack_response",
+    "title": "Web Application Attack Response",
+    "description": "1. Identify vulnerable endpoint from url.original in logs. 2. Enable WAF rule for attack pattern. 3. Patch application input validation. 4. Review database access logs for exfiltration. 5. Rotate application secrets if SQLi confirmed."
+  },
+  {
+    "id": "port_scan_response",
+    "title": "Port Scan Response Playbook",
+    "description": "1. Block scanning IP at firewall. 2. Review which ports were probed. 3. Verify no successful connections to sensitive services. 4. Correlate with subsequent authentication attempts. 5. Add scan detection rule to SIEM."
+  }
+]

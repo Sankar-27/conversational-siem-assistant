@@ -1,0 +1,112 @@
+[
+  {
+    "id": "DET-001",
+    "title": "Brute Force Detection",
+    "description": "Alert when >10 failed_login events from single source.ip within 5 minutes. MITRE: T1110. Query filter: event.action=failed_login grouped by source.ip."
+  },
+  {
+    "id": "DET-002",
+    "title": "Credential Stuffing Detection",
+    "description": "Alert when failed_login events occur across >5 distinct IPs with low attempt counts per IP across multiple user accounts. MITRE: T1110.004."
+  },
+  {
+    "id": "DET-003",
+    "title": "Port Scan / Service Discovery Detection",
+    "description": "Alert when single source.ip connects to >10 distinct destination.port or sweeps endpoints within 10 minutes. MITRE: T1046."
+  },
+  {
+    "id": "DET-004",
+    "title": "SQL Injection (SQLi) Detection",
+    "description": "Alert on url.original or request body matching SQLi patterns (UNION SELECT, OR 1=1, DROP TABLE). MITRE: T1190."
+  },
+  {
+    "id": "DET-005",
+    "title": "Cross-Site Scripting (XSS) Detection",
+    "description": "Alert on <script>, javascript:, onerror=, alert() in request URLs or parameters. MITRE: T1059.007."
+  },
+  {
+    "id": "DET-006",
+    "title": "Suspicious PowerShell Command Detection",
+    "description": "Alert on powershell.exe invocations with -enc, -nop, -w hidden, or WebClient DownloadString flags. MITRE: T1059.001."
+  },
+  {
+    "id": "DET-007",
+    "title": "Command Injection Detection",
+    "description": "Alert on shell delimiters (; | ` &) followed by whoami, id, cat /etc/passwd in web requests. MITRE: T1059.004."
+  },
+  {
+    "id": "DET-008",
+    "title": "Suspicious Authentication / Valid Accounts",
+    "description": "Alert on successful login from anomalous external IP addresses or off-hours access. MITRE: T1078."
+  },
+  {
+    "id": "DET-009",
+    "title": "Impossible Travel Detection",
+    "description": "Alert on logins for the same username from geographically distant source locations within short elapsed time. MITRE: T1078.004."
+  },
+  {
+    "id": "DET-010",
+    "title": "Account Takeover (ATO) Detection",
+    "description": "Alert on successful login followed immediately by password/email changes or privilege escalation attempts. MITRE: T1078.001."
+  },
+  {
+    "id": "DET-011",
+    "title": "Privilege Escalation Detection",
+    "description": "Alert on unauthorized sudo commands, SeDebugPrivilege token assignments, or root execution by standard users. MITRE: T1068."
+  },
+  {
+    "id": "DET-012",
+    "title": "Data Exfiltration Detection",
+    "description": "Alert on abnormal high-volume outbound bytes (>500MB) or excessive DNS query payload lengths. MITRE: T1048."
+  },
+  {
+    "id": "DET-013",
+    "title": "Network Denial of Service (DDoS) Detection",
+    "description": "Alert when request rate from an IP or subnet exceeds 500 requests per minute resulting in 502/504 errors. MITRE: T1498."
+  },
+  {
+    "id": "DET-014",
+    "title": "Lateral Movement Detection",
+    "description": "Alert on internal host-to-host SMB (445), WinRM (5985), or SSH connections from unauthorized subnets. MITRE: T1021.002."
+  },
+  {
+    "id": "DET-015",
+    "title": "Phishing Click & Delivery Detection",
+    "description": "Alert on outbound HTTP requests to newly registered phishing domains or suspicious email attachments. MITRE: T1566."
+  },
+  {
+    "id": "DET-016",
+    "title": "Active Reconnaissance / Perimeter Probing",
+    "description": "Alert on scanner user-agents (nikto, sqlmap, nmap, dirbuster) or access to /.env, /wp-admin, /backup.sql. MITRE: T1595."
+  },
+  {
+    "id": "DET-017",
+    "title": "Persistence via Scheduled Task / Cron Detection",
+    "description": "Alert on schtasks /create or modifications to /etc/cron.* by non-administrator user accounts. MITRE: T1053."
+  },
+  {
+    "id": "DET-018",
+    "title": "Malware Activity / C2 Beaconing Detection",
+    "description": "Alert on regular interval outbound beaconing or execution of known malicious process hashes. MITRE: T1204.002."
+  },
+  {
+    "id": "DET-019",
+    "title": "Ransomware / Mass File Encryption Detection",
+    "description": "Alert on rapid file renaming to .locked/.enc and execution of vssadmin delete shadows. MITRE: T1486."
+  },
+  {
+    "id": "DET-020",
+    "title": "Kerberoasting Detection",
+    "description": "Alert on excessive Kerberos TGS requests with RC4 encryption targeting service principal accounts. MITRE: T1558.003."
+  },
+  {
+    "id": "DET-021",
+    "title": "Path Traversal Detection",
+    "description": "Alert on ../, %2e%2e%2f, or /etc/passwd in URL path parameters. MITRE: T1083."
+  },
+  {
+    "id": "DET-022",
+    "title": "Insider Threat / Anomalous Data Access Detection",
+    "description": "Alert on employee mass downloading confidential documents during off-hours or after notice period. MITRE: T1458."
+  }
+]

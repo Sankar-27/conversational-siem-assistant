@@ -1,0 +1,55 @@
+# FastAPI core
+fastapi>=0.111.0
+uvicorn[standard]>=0.30.0
+python-multipart>=0.0.9
+
+# Database
+sqlalchemy>=2.0.30
+alembic>=1.13.0
+aiosqlite>=0.20.0
+
+# Optional PostgreSQL driver (installed when needed)
+# asyncpg>=0.29.0
+# psycopg2-binary>=2.9.9
+
+# Authentication
+python-jose[cryptography]>=3.3.0
+passlib[bcrypt]>=1.7.4
+# passlib 1.7.4 is incompatible with bcrypt >= 4.1 (crashes on hash/verify)
+bcrypt==4.0.1
+
+# Environment & Config
+python-dotenv>=1.0.0
+pydantic[email]>=2.7.0
+pydantic-settings>=2.3.0
+
+# HTTP client
+httpx>=0.27.0
+aiohttp>=3.9.0
+
+# Elasticsearch (optional)
+elasticsearch>=8.13.0
+
+# LLM providers
+google-generativeai>=0.7.0
+openai>=1.35.0
+anthropic>=0.29.0
+
+# PDF generation
+reportlab>=4.2.0
+Pillow>=10.4.0
+
+# Security / IOC extraction & Utils
+regex>=2024.5.0
+validators>=0.28.0
+python-dateutil>=2.9.0
+pytz>=2024.1
+rich>=13.7.0
+
+# RAG — ChromaDB optional (keyword fallback if not installed)
+# chromadb>=0.5.0
+
+# Testing
+pytest>=8.2.0
+pytest-asyncio>=0.23.0
+
